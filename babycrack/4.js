@@ -44,6 +44,7 @@ function check(silent) {
     _0xa180("0x1b"), _0xa180("0x1c"), _0xa180("0x1d"), "replace", _0xa180("0x1e"), _0xa180("0x1f"), "includes", _0xa180("0x20"), "length", _0xa180("0x21"), _0xa180("0x22"), _0xa180("0x23"), _0xa180("0x24"), _0xa180("0x25"), _0xa180("0x26"), _0xa180("0x27"), _0xa180("0x28"), _0xa180("0x29"), "toString", _0xa180("0x2a"), "split"];
     var x = silent[udataCur[5]](0, 4);
     // x = name.substring(0, 4)
+    // x = 'htcf'
     /** @type {number} */
     var charCodeToReplace = parseInt(btoa(x), 32);
     // what do we want charCodeToReplace to be
@@ -90,10 +91,15 @@ function check(silent) {
       for (;options--;) {
         if (optionsCache[options]) {
           dataAndEvents = dataAndEvents[_0xa180("0x2c")](new RegExp("\\b" + check(options) + "\\b", "g"), optionsCache[options]);
+          // dataAndEvents = dataAndEvents['replace'](new RegExp("\\b" + "\w+" + "\\b", "g"), function(timeoutKey) { return opt_attributes[timeoutKey] });
         }
       }
+      // (function(){(function a(){try{(function b(i){if((''+(i/i)).length!==1||i%20===0){(function(){}).constructor('debugger')()}else{debugger}b(++i)})(0)}catch(e){setTimeout(a,5000)}})()})()
       return dataAndEvents;
     }(_0xa180("0x2d"), 17, 17, _0xa180("0x2e")["split"]("|"), 0, {}));
+
+    // the above evals some stuff into the global scope
+
     (function(value, i) {
       /**
        * @param {number} silent
@@ -106,6 +112,10 @@ function check(silent) {
       };
       check(++i);
     })(udataCur, charCodeToReplace % 123);
+
+    // this scrambles the udataCur array by an amount determined by
+    // charCodeToReplace
+
     /**
      * @param {number} opt_attributes
      * @return {?}
