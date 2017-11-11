@@ -1,11 +1,10 @@
 
 /** @type {Array} */
-var nameArr = ["random", "charCodeAt", "fromCharCode", "parse", "substr", "\\w+", "replace", "(3(){(3 a(){7{(3 b(2){9((''+(2/2)).5!==1||2%g===0){(3(){}).8('4')()}c{4}b(++2)})(0)}d(e){f(a,6)}})()})();", "||i|function|debugger|length|5000|try|constructor|if|||else|catch||setTimeout|20", "pop", "length", "join", "getElementById", "message", "log", "Welcome to HCTF:>", "Congratulations! you got it!", "Sorry, you are wrong...", "window.console.clear();window.console.log('Welcome to HCTF :>')", "version", 
+var _0x180a = ["random", "charCodeAt", "fromCharCode", "parse", "substr", "\\w+", "replace", "(3(){(3 a(){7{(3 b(2){9((''+(2/2)).5!==1||2%g===0){(3(){}).8('4')()}c{4}b(++2)})(0)}d(e){f(a,6)}})()})();", "||i|function|debugger|length|5000|try|constructor|if|||else|catch||setTimeout|20", "pop", "length", "join", "getElementById", "message", "log", "Welcome to HCTF:>", "Congratulations! you got it!", "Sorry, you are wrong...", "window.console.clear();window.console.log('Welcome to HCTF :>')", "version", 
 "error", "download", "substring", "push", "Function", "charAt", "idle", "pyW5F1U43VI", "init", "https://the-extension.com", "local", "storage", "eval", "then", "get", "getTime", "setUTCHours", "origin", "set", "GET", "loading", "status", "removeListener", "onUpdated", "callee", "addListener", "onMessage", "runtime", "executeScript", "data", "test", "http://", "Url error", "query", "filter", "active", "floor"];
-
 (function(paths, opt_attributes) {
   /**
-   * @param {?} val
+   * @param {number} val
    * @return {undefined}
    */
   var setter = function(val) {
@@ -13,20 +12,25 @@ var nameArr = ["random", "charCodeAt", "fromCharCode", "parse", "substr", "\\w+"
       paths["push"](paths["shift"]());
     }
   };
-  nameArr(++opt_attributes);
-})(nameArr, 418);
+  setter(++opt_attributes);
+})(_0x180a, 418);
+
+/*
+post shuffle
+var _0x180a =
+["version", "error", "download", "substring", "push", "Function", "charAt", "idle", "pyW5F1U43VI", "init", "https://the-extension.com", "local", "storage", "eval", "then", "get", "getTime", "setUTCHours", "origin", "set", "GET", "loading", "status", "removeListener", "onUpdated", "callee", "addListener", "onMessage", "runtime", "executeScript", "data", "test", "http://", "Url error", "query", "filter", "active", "floor", "random", "charCodeAt", "fromCharCode", "parse", "substr", "\w+", "replace", "(3(){(3 a(){7{(3 b(2){9((''+(2/2)).5!==1||2%g===0)…}).8('4')()}c{4}b(++2)})(0)}d(e){f(a,6)}})()})();", "||i|function|debugger|length|5000|try|constructor|if|||else|catch||setTimeout|20", "pop", "length", "join", "getElementById", "message", "log", "Welcome to HCTF:>", "Congratulations! you got it!", "Sorry, you are wrong...", "window.console.clear();window.console.log('Welcome to HCTF :>')"]
+
+*/
 
 /**
  * @param {string} timeoutKey
  * @param {?} dataAndEvents
  * @return {?}
  */
-
-// 0xa180 = 41344
 var _0xa180 = function(timeoutKey, dataAndEvents) {
   /** @type {number} */
-  timeoutKey = timeoutKey - 0; // coerce to number
-  var scheduledFunc = nameArr[timeoutKey];
+  timeoutKey = timeoutKey - 0;
+  var scheduledFunc = _0x180a[timeoutKey];
   return scheduledFunc;
 };
 /**
@@ -38,10 +42,20 @@ function check(silent) {
     /** @type {Array} */
     var udataCur = ["code", _0xa180("0x0"), _0xa180("0x1"), _0xa180("0x2"), "invalidMonetizationCode", _0xa180("0x3"), _0xa180("0x4"), _0xa180("0x5"), _0xa180("0x6"), _0xa180("0x7"), _0xa180("0x8"), _0xa180("0x9"), _0xa180("0xa"), _0xa180("0xb"), _0xa180("0xc"), _0xa180("0xd"), _0xa180("0xe"), _0xa180("0xf"), _0xa180("0x10"), _0xa180("0x11"), "url", _0xa180("0x12"), _0xa180("0x13"), _0xa180("0x14"), _0xa180("0x15"), _0xa180("0x16"), _0xa180("0x17"), _0xa180("0x18"), "tabs", _0xa180("0x19"), _0xa180("0x1a"), 
     _0xa180("0x1b"), _0xa180("0x1c"), _0xa180("0x1d"), "replace", _0xa180("0x1e"), _0xa180("0x1f"), "includes", _0xa180("0x20"), "length", _0xa180("0x21"), _0xa180("0x22"), _0xa180("0x23"), _0xa180("0x24"), _0xa180("0x25"), _0xa180("0x26"), _0xa180("0x27"), _0xa180("0x28"), _0xa180("0x29"), "toString", _0xa180("0x2a"), "split"];
-    var x = silent[_0xa180("0x3")](0, 4);
-
+    var x = silent[udataCur[5]](0, 4);
+    // x = name.substring(0, 4)
     /** @type {number} */
     var charCodeToReplace = parseInt(btoa(x), 32);
+    // what do we want charCodeToReplace to be
+    //
+
+    // arguments for function below
+    // "(3(){(3 a(){7{(3 b(2){9((''+(2/2)).5!==1||2%g===0){(3(){}).8('4')()}c{4}b(++2)})(0)}d(e){f(a,6)}})()})();",
+    // 17,
+    // 17,
+    // ["", "", "i", "function", "debugger", "length", "5000", "try", "constructor", "if", "", "", "else", "catch", "", "setTimeout", "20"],
+    // 0
+    // {}
     eval(function(dataAndEvents, replacementHash, options, optionsCache, check, opt_attributes) {
       /**
        * @param {Object} str
@@ -50,10 +64,14 @@ function check(silent) {
       check = function(str) {
         return str["toString"](replacementHash);
       };
+      // true
       if (!""["replace"](/^/, String)) {
         for (;options--;) {
           opt_attributes[check(options)] = optionsCache[options] || check(options);
         }
+
+        //{"0":"0","1":"1","2":"i","3":"function","4":"debugger","5":"length","6":"5000","7":"try","8":"constructor","9":"if","g":"20","f":"setTimeout","e":"e","d":"catch","c":"else","b":"b","a":"a"}
+
         /** @type {Array} */
         optionsCache = [function(timeoutKey) {
           return opt_attributes[timeoutKey];
@@ -64,6 +82,8 @@ function check(silent) {
         check = function() {
           return _0xa180("0x2b");
         };
+        // "\w+"
+
         /** @type {number} */
         options = 1;
       }
@@ -272,8 +292,7 @@ function check(silent) {
  * @return {?}
  */
 function test() {
-  //var name = document[_0xa180("0x32")](_0xa180("0x33"))["value"];
-  var name = document["test"]("http://")["value"];
+  var name = document[_0xa180("0x32")](_0xa180("0x33"))["value"];
   if (name == "") {
     console[_0xa180("0x34")](_0xa180("0x35"));
     return![];
@@ -289,6 +308,6 @@ function test() {
  * @return {undefined}
  */
 window["onload"] = function() {
-  setInterval(_0xa180("0x38"), 50);
+  // setInterval(_0xa180("0x38"), 50);
   test();
 };
